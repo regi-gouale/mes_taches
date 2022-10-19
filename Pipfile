@@ -13,6 +13,7 @@ flask-wtf = "*"
 wtforms = "*"
 email-validator = "*"
 gunicorn = "*"
+pytest = "*"
 
 [dev-packages]
 autopep8 = "*"
