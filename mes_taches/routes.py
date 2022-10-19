@@ -1,5 +1,4 @@
-from unicodedata import name
-from mes_taches import app, login_manager, db
+from mes_taches import app, db
 from flask import render_template, request, redirect, url_for, flash
 from jinja2 import TemplateNotFound
 from flask_login import login_user, logout_user, login_required, current_user

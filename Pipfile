@@ -12,6 +12,7 @@ flask-sqlalchemy = "*"
 flask-wtf = "*"
 wtforms = "*"
 email-validator = "*"
+gunicorn = "*"
 
 [dev-packages]
 autopep8 = "*"

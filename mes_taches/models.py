@@ -42,4 +42,4 @@ class Task(db.Model):
     author = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
-        return f"Task('{self.title}', '{self.created_date}')"
+        return f"Task('{self.title}', '{self.deadline}')"
