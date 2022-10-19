@@ -1,7 +1,7 @@
 # Cas de test pour créer s'incrire sur l'application
 
 Scenario: S'inscrire sur l'application
-    Given I am on "/register"
+    Given I am on "http://127.0.0.1:5000/register"
     When I fill in "Votre nom" with "Jean Dubois"
     And I fill in "Votre pseudo" with "jdubois"
     And I fill in "Votre email" with "jean.dubois@monmail.com"
@@ -9,6 +9,7 @@ Scenario: S'inscrire sur l'application
     And I fill in "Confirmer votre mot de passe" with "123456"
     And I press "S'inscrire"
     Then I should see "Compte créé avec succès! Vous êtes connecté en tant que Jean Dubois"
+    And I should be on "http://127.0.0.1:5000/index"
 
 ## Pages de l'application à tester
 

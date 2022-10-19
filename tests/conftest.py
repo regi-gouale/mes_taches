@@ -8,8 +8,8 @@ import selenium.webdriver as webdriver
 def browser():
     """Fixture pour le navigateur."""
 
-    # On crée une instance de Firefox
-    driver = webdriver.Firefox()
+    # On crée une instance de Chrome
+    driver = webdriver.Chrome()
     
     # On attend 10 secondes pour que la page se charge
     driver.implicitly_wait(10)
