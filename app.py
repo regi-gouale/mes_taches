@@ -1,4 +1,4 @@
-from mes_taches import app, template_dir
+from mes_taches import app, template_dir, db
 from mes_taches import routes
 
 app.add_url_rule('/', view_func=routes.index)
@@ -12,4 +12,5 @@ app.add_url_rule('/register', view_func=routes.register)
 
 if __name__ == '__main__':
     with app.app_context():
+        db.create_all()
         app.run(debug=True, use_reloader=True)

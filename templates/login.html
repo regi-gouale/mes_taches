@@ -7,7 +7,7 @@
 {% block content %}
   <body class="text-center">
     <div class="container">
-      <form method="POST" class="form-signin" style="color:white">
+      <form method="POST" class="form-signin" style="color:black">
         {{ form.hidden_tag() }}
         <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
         <br />
@@ -24,7 +24,7 @@
         <a href="{{ url_for('register') }}" class="btn btn-lg btn-primary btn-block">S'inscrire</a>
         <br />
         <div class="checkbox mb-3">
-          <label><input type="checkbox" value="remember-me" />Se souvenir de moi</label>
+          <label><input type="checkbox" value="remember_me" />Se souvenir de moi</label>
         </div>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
       </form>
