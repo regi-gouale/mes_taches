@@ -1,4 +1,15 @@
+from selenium.webdriver.common.by import By
+
+
 class MesTachesRegisterPage:
+    REGISTER_NAME_INPUT = (By.ID, "name")
+    REGISTER_USERNAME_INPUT = (By.ID, "username")
+    REGISTER_EMAIL_INPUT = (By.ID, "email")
+    REGISTER_PASSWORD_INPUT = (By.ID, "password")
+    REGISTER_PASSWORD_CONFIRM_INPUT = (By.ID, "password_confirm")
+    
+    REGISTER_SUBMIT_BUTTON = (By.ClassName , "btn btn-lg btn-primary btn-block")
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -29,4 +40,3 @@ class MesTachesRegisterPage:
     def submit(self):
         # TODO: Soumettre le formulaire
         pass
-    

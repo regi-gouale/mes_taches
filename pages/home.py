@@ -1,4 +1,11 @@
+from selenium.webdriver.common.by import By
+
+
 class MesTachesHomePage:
+    HOME_WELCOME_MESSAGE = (By.CSS_SELECTOR, "div.alert.alert-success")
+    HOME_TITLE = (By.CSS_SELECTOR, "h1")
+    HOME_USERNAME = (By.CSS_SELECTOR, "a.nav-link")
+
     def __init__(self, browser):
         self.browser = browser
 

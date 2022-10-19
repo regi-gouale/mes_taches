@@ -21,3 +21,10 @@ Scenario: S'inscrire sur l'application
   - [ ] charger la page
   - [ ] vérifier le titre
   - [ ] vérifier le message de bienvenue
+
+## Elements nécessaires pour le test
+
+1. Les entrées du formulaire de la page d'inscription
+2. Le bouton de validation du formulaire
+3. Le titre de la page d'accueil
+4. Le message de bienvenue de la page d'accueil
