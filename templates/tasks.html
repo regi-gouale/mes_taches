@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Mes Tâches
+{% endblock %}
+
+{% block content %}
+  <div class="row" style="margin-top:20px; margin-bottom:20px;">
+    <div class="col-md-12">
+      <h2>Mes Tâches</h2>
+      <a class="nav-link" href="{{ url_for('add_task') }}">Ajouter une tâche</a>
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Titre</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date de création</th>
+            <th scope="col">Date de fin</th>
+            <th scope="col">Statut</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for task in tasks %}
+            <tr>
+              <td>{{ task.title }}</td>
+              <td>{{ task.description }}</td>
+              <td>{{ task.created_at }}</td>
+              <td>{{ task.end_date }}</td>
+              <td>{{ task.status }}</td>
+              <td>
+                <div class="row">
+                  <div class="col-md-6">
+                    {% if task.status == 'Pas Commencé' %}
+                      <button class="btn btn-outline btn-info" data-toggle="modal" data-target="#Modal-ChangeTaskStatus-{{ task.id }}">Commencer</button>
+                      {% elif task.status == 'En Cours' %}
+                      <button class="btn btn-outline btn-success" data-toggle="modal" data-target="#Modal-ChangeTaskStatus-{{ task.id }}">Terminer</button>
+                    {% endif %}
+                  </div>
+                  <div class="col-md-6">
+                    <button class="btn btn-outline btn-danger" data-toggle="modal" data-target="#Modal-DeleteTask-{{ task.id }}">Supprimer</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4">
+      <a class="nav-link" href="{{ url_for('logout') }}">Déconnexion</a>
+    </div>
+  </div>
+{% endblock %}

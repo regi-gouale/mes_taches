@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Connexion
+{% endblock %}
+
+{% block content %}
+  <body class="text-center">
+    <div class="container">
+      <form method="POST" class="form-signin" style="color:white">
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+        <br />
+        {{ form.username.label() }}
+        {{ form.username(size = 32, class = 'form-control', placeholder = "Nom d'utilisateur") }}
+
+        {{ form.password.label() }}
+        {{ form.password(size = 32, class = 'form-control', placeholder = 'Mot de passe') }}
+
+        <br />
+        {{ form.submit(class = 'btn btn-lg btn-primary btn-block') }}
+
+        <br />
+        <a href="{{ url_for('register') }}" class="btn btn-lg btn-primary btn-block">S'inscrire</a>
+        <br />
+        <div class="checkbox mb-3">
+          <label><input type="checkbox" value="remember-me" />Se souvenir de moi</label>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+      </form>
+    </div>
+  </body>
+{% endblock %}

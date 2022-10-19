@@ -1,4 +1,8 @@
 .DS_Store
 *.lock
 *.log
-.DS_Store
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.swn

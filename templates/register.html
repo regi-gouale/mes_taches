@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  S'inscrire
+{% endblock %}
+
+{% block content %}
+  <body class="text-center">
+    <div class="container">
+      <form method="POST" class="form-register" style="color:white">
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 font-weight-normal">S'inscrire</h1>
+        <br />
+        {{ form.name.label() }}
+        {{ form.name(size = 32, class = 'form-control', placeholder = 'Votre nom') }}
+
+        {{ form.email.label() }}
+        {{ form.email(size = 32, class = 'form-control', placeholder = 'Votre email') }}
+
+        {{ form.password.label() }}
+        {{ form.password(size = 32, class = 'form-control', placeholder = 'Votre mot de passe') }}
+
+        {{ form.password_confirmation.label() }}
+        {{ form.password_confirmation(size = 32, class = 'form-control', placeholder = 'Confirmer votre mot de passe') }}
+        <br />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+        <br />
+        <br />
+        <a href="{{ url_for('login') }}">Se connecter</a>
+      </form>
+    </div>
+  </body>
+{% endblock %}

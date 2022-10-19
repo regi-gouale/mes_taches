@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Ajouter une nouvelle tâche
+{% endblock %}
+
+{% block content %}
+  <body class="text-center">
+    <div class="container">
+      <form method="POST" class="form-register" style="color:white">
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 font-weight-normal">Ajouter une nouvelle tâche</h1>
+        <br />
+        <div class="form-group">{{ form.label('title', 'Titre de la tâche') }}
+          {{ form.text_field('title', class = 'form-control') }}</div>
+        <div class="form-group">{{ form.label('description', 'Description de la tâche') }}
+          {{ form.text_field('description', class = 'form-control') }}</div>
+        <div class="form-group">{{ form.label('deadline', 'Date limite') }}
+          {{ form.text_field('deadline', class = 'form-control') }}</div>
+        {{ form.submit('Ajouter', class = 'btn btn-lg btn-primary btn-block') }}
+      </form>
+    </div>
+  </body>
+{% endblock %}
