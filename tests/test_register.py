@@ -4,6 +4,7 @@ Ces tests couvrent l'inscription d'un utilisateur sur le site.
 
 from pages.register import MesTachesRegisterPage
 from pages.home import MesTachesHomePage
+import random
 
 def test_register_to_site(browser):
     """
@@ -13,8 +14,8 @@ def test_register_to_site(browser):
     home_page = MesTachesHomePage(browser)
 
     NAME = "Jean Dubois"
-    USERNAME = "jdubois"
-    EMAIL = "jean.dubois@monmail.com"
+    USERNAME = f"jdubois-{random.randint(1, 999999)}"
+    EMAIL = f"jean.dubois.{random.randint(1, 999999)}@monmail.com"
     PASSWORD = "123456"
 
     # On se rend sur la page d'inscription
@@ -46,5 +47,3 @@ def test_register_to_site(browser):
 
     # On vérifie que le message de succès est bien affiché
     assert home_page.get_success_message()
-
-    raise NotImplementedError
