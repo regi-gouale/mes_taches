@@ -13,6 +13,9 @@ flask-wtf = "*"
 wtforms = "*"
 email-validator = "*"
 gunicorn = "*"
+pytest = "*"
+selenium = "*"
+webdriver-manager = "*"
 
 [dev-packages]
 autopep8 = "*"
