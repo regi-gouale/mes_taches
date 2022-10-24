@@ -16,6 +16,7 @@ gunicorn = "*"
 pytest = "*"
 selenium = "*"
 webdriver-manager = "*"
+pytest-xdist = "*"
 
 [dev-packages]
 autopep8 = "*"
